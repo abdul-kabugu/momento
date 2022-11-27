@@ -21,7 +21,7 @@ function UserProfileHeader({userProfile, isUserProfileError, isUserProfileLoadin
            <Text mt={3}>{userProfile?.profile?.bio  || "No Bio"}</Text>
           </Box>
            <Box>
-             <Button rightIcon={<AiOutlineUserAdd  />} colorScheme="messenger" size="lg" >Follow</Button>
+             <Button rightIcon={<AiOutlineUserAdd  />} colorScheme="messenger" size="lg" onClick={() => followUsers()}>Follow</Button>
             </Box>
             </Box>
               <Box display='flex' alignItems="center" gap={6} flexWrap="wrap" mt={3}>

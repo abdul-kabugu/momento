@@ -50,7 +50,7 @@ export default function TopNav() {
   return (
     <Box w="100%" h="60px" borderBottom="1px solid " borderColor="gray.300" display='flex' alignItems="center">
      <Container>
-      <Text>Momento</Text>
+     <Link href="/"> <Text fontSize='lg' fontWeight='semibold'>Momento</Text>  </Link>
      </Container>
       <Hide below='lg'>
       <Container>
