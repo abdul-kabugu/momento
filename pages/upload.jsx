@@ -6,7 +6,7 @@ import TopNav from '../components/TopNav'
 import { useCreatePost } from '../hooks/lens-react'
 import {SyncLoader} from 'react-spinners'
 import {toast} from 'react-toastify'
-function upload() {
+function Upload() {
 const [currentStep, setcurrentStep] = useState(0)
 const [selectedVidFileCID, setselectedVidFileCID] = useState()
  const [selectedCollectModule, setselectedCollectModule] = useState("FreeCollectModule")
@@ -187,4 +187,4 @@ const getPostModules = () => {
   )
 }
 
-export default upload
+export default Upload

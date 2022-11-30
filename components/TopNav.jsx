@@ -7,6 +7,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { useSignIn } from '../hooks/lens-react'
 import {useAccount} from 'wagmi'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function TopNav() {
   const [searchInput, setsearchInput] = useState("")
@@ -35,7 +36,7 @@ export default function TopNav() {
       )
     }else if(isConnected && LENS_ACCESS_TOKEN === null){
       return(
-        <Button leftIcon={<img  src='/img/lens-logo.jpg'  style={{width : "20px", borderRadius : "50%"}} />} colorScheme="messenger" onClick={handleSignIn}>Sign-In with lens</Button>
+        <Button leftIcon={<Image  src='/img/lens-logo.jpg' alt='lens-logo'  style={{width : "20px", borderRadius : "50%"}} />} colorScheme="messenger" onClick={handleSignIn}>Sign-In with lens</Button>
       )
     }else if(address && LENS_ACCESS_TOKEN){
       return(
@@ -60,9 +61,10 @@ export default function TopNav() {
              pointerEvents='none'
              color='gray.300'
              fontSize='1.2em'
-             children={<BsSearch  cursor="pointer" />}
-           />
+             >children={<BsSearch  cursor="pointer" />}</InputRightElement>
+           
       </InputGroup>
+  
       </Container >
       </Hide>
         <Container display='flex' gap={7}>

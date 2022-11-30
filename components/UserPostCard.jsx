@@ -9,7 +9,7 @@ export default function UserPostCard({post}) {
          {post?.metadata?.media.map((media, i) => {
 
           return(
-            <video src={media.original.url} className="user-post-card-video"></video>
+            <video key={i} src={media.original.url} className="user-post-card-video"></video>
           )
          })}
        </Box>
